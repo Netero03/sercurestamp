@@ -16,7 +16,13 @@ const VerifyCertificate = () => {
 
   const handleClick = (e: any) => {
     e.preventDefault();
+    try{
     router.push(`/verify/${hash}`);
+    }
+    catch(error){
+      
+      alert("error")
+    }
   };
 
   return (

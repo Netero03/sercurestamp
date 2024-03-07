@@ -92,7 +92,7 @@ const CertificateIssue = () => {
             <h1 className={styles.title}>Certificate</h1>
 
             <img
-              src={`https://api.qrserver.com/v1/create-qr-code/?data=https://dcis.vercel.app/verify/${result}&size=256x256&bgcolor=220-227-231`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=https://sercurestamp.vercel.app/verify/${result}&size=256x256&bgcolor=220-227-231`}
               alt=""
               title="qrcode"
               width={256}
