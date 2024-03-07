@@ -14,14 +14,13 @@ const VerifyCertificate = () => {
 
   const [hash, setHash] = useState("");
 
-  const handleClick = (e: any) => {
+  const handleClick =async (e: any) => {
     e.preventDefault();
-    try{
-    router.push(`/verify/${hash}`);
-    }
-    catch(error){
-      
-      alert("error")
+    try {
+      await router.push(`/verify/${hash}`);
+    } catch (error) {
+      console.error("Error navigating to verification page:", error);
+      // Handle the error here, such as displaying a message to the user
     }
   };
 
