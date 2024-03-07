@@ -20,19 +20,31 @@ const VerifyCertificate = () => {
 
   const Verify = async (hash: string | string[] | undefined) => {
     setLoading(true);
+    let verificationCompleted = false; // Flag to track if verification is completed
+  
     try {
       if (hash != undefined) {
-        alert("Certificate invalid");
+        console.log("Verifying..");
+        const timeoutDuration = 20000; // Timeout duration in milliseconds (adjust as needed)
+        
+        // Set a timeout to trigger an alert if verification takes too long
+        setTimeout(() => {
+          if (!verificationCompleted) {
+            alert("Verification is taking too long. Please try again later.");
+          }
+        }, timeoutDuration);
+  
         const data = await Contract?.call("VerifyCertificate", [hash]);
         setVerified(data[0]);
         setResult(data[1]);
         setLoading(false);
         console.log(data[0]);
+        verificationCompleted = true; // Mark verification as completed
       }
     } catch (error) {
       console.log(error);
     }
-  };
+  };  
 
   useEffect(() => {
     if (!verified && hash) Verify(hash);
@@ -46,7 +58,7 @@ const VerifyCertificate = () => {
         <Navbar></Navbar>
         {verified && (
           <div className={styles.form}>
-            <h1 className={styles.title}>Certificate</h1>
+            <h1 className={styles.title}>Result</h1>
 
             <label>
               Verification Status:{" "}
