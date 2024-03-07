@@ -22,7 +22,7 @@ const VerifyCertificate = () => {
     setLoading(true);
     try {
       if (hash != undefined) {
-        console.log("Verifying..");
+        alert("Certificate invalid");
         const data = await Contract?.call("VerifyCertificate", [hash]);
         setVerified(data[0]);
         setResult(data[1]);
