@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-
+  background-color:#000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,9 +24,32 @@ padding: 24px 28px;
 width: 95vh;
 display: flex;
 flex-direction: column;
-
-border-radius: 12px;
+border: 2px solid #ffd700; /* Yellow/Gold border */
+border-radius: 30px;
 }
+
+.form:hover
+{
+  animation: glowing 5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 10px #ffd700; }
+  13% { box-shadow: 0 0 10px #ffd700; }
+  25% { box-shadow: 0 0 10px #ffd700; }
+  33% { box-shadow: 0 0 10px #ffd700; }
+  50% { box-shadow: 0 0 20px #ffd700; }
+  63% { box-shadow: 0 0 10px #ffd700; }
+  75% { box-shadow: 0 0 10px #ffd700; }
+  83% { box-shadow: 0 0 10px #ffd700; }
+  100% { box-shadow: 0 0 10px #ffd700; }
+}
+
+/* Apply the animation to the element with the class .glow */
+/* .glow {
+  animation: glowing 2.5s infinite alternate;
+} */
+
 
 .button
 {

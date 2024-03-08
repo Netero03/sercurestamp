@@ -11,7 +11,8 @@ const Home: NextPage = () => {
   const btnTheme = darkTheme({
     fontFamily: "Inter, sans-serif",
     colors: {
-      primaryButtonBg: "#121212",
+      primaryButtonBg: "#c9a90a",
+      secondaryButtonHoverBg: "#ba5a00",
       primaryButtonText: "#ffffff",
     },
   });

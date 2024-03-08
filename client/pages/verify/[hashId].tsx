@@ -58,7 +58,7 @@ const VerifyCertificate = () => {
         <Navbar></Navbar>
         {verified && (
           <div className={styles.form}>
-            <h1 className={styles.title}>Result</h1>
+            <h1 className={styles.title}>Certificate</h1>
 
             <label>
               Verification Status:{" "}

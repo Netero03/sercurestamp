@@ -15,7 +15,7 @@ const Navbar = () => {
       </Link>
       <ul className={styles.links}>
         <li>
-          <Link href="/verify">Verify</Link>
+          <Link href="/verify">Verify Certificate</Link>
         </li>
         {address && IsOrg && (
           <li>

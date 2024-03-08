@@ -30,7 +30,7 @@ const VerifyCertificate = () => {
 
       <div className={styles.container}>
         <Navbar></Navbar>
-        <form className={styles.form}>
+        <form className={`${styles.form} ${styles.glow}`}>
           <h1 className={styles.title}>Verify Certificate</h1>
           <label>ID*</label>
           <input

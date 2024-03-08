@@ -17,8 +17,8 @@
     height: auto;     
     margin: auto 0;
     user-select: none;
-
     transition: all 0.2s ease-out;
+    font-size: x-large;
 }
 .icon:hover
 {
